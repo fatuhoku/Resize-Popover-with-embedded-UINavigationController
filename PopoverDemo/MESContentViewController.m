@@ -5,9 +5,6 @@
 
 #import "MESContentViewController.h"
 
-@interface MESContentViewController ()
-
-@end
 
 @implementation MESContentViewController
 - (IBAction)smallTouched:(id)sender {
