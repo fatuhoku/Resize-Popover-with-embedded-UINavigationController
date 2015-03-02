@@ -1,15 +1,19 @@
-How to have UIPopoverController containing a UINavigationController perform animated resizing based on view controllers being pushed
-------------------------------------------------------------------------------------------------------------------------------------
+**How do I animate the resizing of UIPopoverController containing a UINavigationController based on the sizes of the view controllers being pushed?**
 
-Normally, setting preferredContentSize on a contained view controller is
-sufficient to trigger the popover's animated resize.
+Normally, setting `preferredContentSize` on a view controller you want to
+present with a `UIPopoverController` is enough to trigger the popover's
+animated resize.
 
-When using a navigation controller however, the resize animation is performed
-*after* the push transition.
+However when presenting a `UINavigationController` in a popover, setting
+`preferredContentSize` causes the resize animation to be performed *after* the
+push transition (see
+[kylesluder/PopoverSizing](https://github.com/kylesluder/PopoverSizing)).
 
-The trick is to make sure the navigation controller is treated as a child view controller;
-we then manipulate the `preferredContentSize` of is parentViewController. We do this every
-time the navigation controller is about to present a new view controller through its
-delegate.
+The solution is to use [view controller
+containment](http://www.objc.io/issue-1/containment-view-controller.html) wrap
+the `UINavigationController` in a containing `UIViewController` (i.e. make
+UINavigationController), which we then manipulate the `preferredContentSize`
+of. We can make sure this is done every time a view controller is pushed by
+supplying a delegate to the navigation controller.
 
 See `MESViewController.m` for more details.
