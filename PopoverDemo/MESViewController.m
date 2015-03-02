@@ -10,7 +10,7 @@
 #import "RBStoryboardLink.h"
 
 @interface MESViewController () <UINavigationControllerDelegate>
-@property(nonatomic, strong) RBStoryboardLink *storyboardLink;
+@property(nonatomic, strong) UIViewController *containerVC;
 @end
 
 @implementation MESViewController
@@ -33,12 +33,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.storyboardLink = [self.storyboard instantiateViewControllerWithIdentifier:@"link"];
-
-    UINavigationController *navigationController = (UINavigationController *) self.storyboardLink.scene;
+    UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"content"];
     navigationController.delegate = self;
+    
+    self.containerVC = [[UIViewController alloc] init];
+    [self.containerVC addChildViewController:navigationController];
+    [self.containerVC.view addSubview:navigationController.view];
+    [navigationController didMoveToParentViewController:self.containerVC];
+    
+    navigationController.view.translatesAutoresizingMaskIntoConstraints = NO;
 
-    self.popover = [[UIPopoverController alloc] initWithContentViewController:self.storyboardLink];
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:self.containerVC];
 }
 
 #pragma mark - Actions
@@ -53,16 +58,16 @@
 #pragma mark - UINavigationControllerDelegate
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    NSAssert(self.storyboardLink, @"Storyboard link should be present.");
+    NSAssert(self.containerVC, @"Storyboard link should be present.");
 
     CGSize size = viewController.preferredContentSize;
 
     // **********************************************************************
     // Here, we set the size, triggering the popover to animate its resizing.
     // **********************************************************************
-    NSLog(@"Setting navigationController's containing view controller's preferred content size to %@", NSStringFromCGSize(size));
+    NSLog(@"Setting container view controller's preferred content size to %@", NSStringFromCGSize(size));
     
-    self.storyboardLink.preferredContentSize = size;
+    self.containerVC.preferredContentSize = size;
 }
 
 @end

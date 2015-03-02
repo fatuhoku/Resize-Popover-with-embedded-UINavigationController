@@ -72,30 +72,6 @@
             </objects>
             <point key="canvasLocation" x="2256" y="-1564"/>
         </scene>
-        <!--Storyboard Link-->
-        <scene sceneID="xQT-YU-TvS">
-            <objects>
-                <viewController storyboardIdentifier="link" id="wQk-oq-6ZM" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cTV-5a-ZRS"/>
-                        <viewControllerLayoutGuide type="bottom" id="n3c-yJ-QuJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gj6-hO-YNW">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.36335313320000001" blue="0.13662942850000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="C5t-Gs-fSS"/>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Main"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="sceneIdentifier" value="content"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8WH-fn-02G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1494" y="-1277"/>
-        </scene>
         <!--Medium-->
         <scene sceneID="PHF-Yj-4uO">
             <objects>
@@ -137,6 +113,7 @@
         <scene sceneID="HqD-yj-hIt">
             <objects>
                 <navigationController storyboardIdentifier="content" id="iNR-cP-sKS" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsz-QF-u2R">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -147,7 +124,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e36-D9-iWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="-172"/>
+            <point key="canvasLocation" x="1454" y="-1277"/>
         </scene>
         <!--Large-->
         <scene sceneID="KMH-S4-Y4J">
