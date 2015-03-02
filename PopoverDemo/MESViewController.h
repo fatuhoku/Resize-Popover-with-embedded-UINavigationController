@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MESViewController : UIViewController
-
+@interface MESViewController : UIViewController <UIPopoverControllerDelegate>
+@property(nonatomic, strong) UIPopoverController *popover;
 @end
