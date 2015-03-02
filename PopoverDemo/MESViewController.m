@@ -7,7 +7,7 @@
 //
 
 #import "MESViewController.h"
-#import "MESPopoverController.h"
+#import "MESContentViewController.h"
 
 @interface MESViewController ()
 @end
@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    MESPopoverController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverContentController"];
+    MESContentViewController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverContentController"];
     
 	// Setup the popover for use in the detail view.
 	self.popover = [[UIPopoverController alloc] initWithContentViewController:content];

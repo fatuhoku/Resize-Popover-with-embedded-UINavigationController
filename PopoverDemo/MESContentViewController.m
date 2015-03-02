@@ -3,13 +3,13 @@
 // Copyright (c) 2014 MakeEatSee. All rights reserved.
 //
 
-#import "MESPopoverController.h"
+#import "MESContentViewController.h"
 
-@interface MESPopoverController ()
+@interface MESContentViewController ()
 
 @end
 
-@implementation MESPopoverController
+@implementation MESContentViewController
 - (IBAction)smallTouched:(id)sender {
     self.preferredContentSize = CGSizeMake(200,200);
 }

@@ -6,5 +6,5 @@
 #import <Foundation/Foundation.h>
 
 
-@interface MESPopoverController : UIViewController
+@interface MESContentViewController : UIViewController
 @end
