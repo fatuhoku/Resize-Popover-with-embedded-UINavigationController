@@ -7,9 +7,9 @@
 //
 
 #import "MESViewController.h"
+#import "MESPopoverController.h"
 
 @interface MESViewController ()
-
 @end
 
 @implementation MESViewController
@@ -18,12 +18,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    MESPopoverController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"PopoverContentController"];
+    
+	// Setup the popover for use in the detail view.
+	self.popover = [[UIPopoverController alloc] initWithContentViewController:content];
+//	self.popover.popoverContentSize = CGSizeMake(320., 320.);
+	self.popover.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)showPopover:(UIButton *)sender {
+    // Set the sender to a UIButton.
+    UIButton *tappedButton = (UIButton *)sender;
+
+    // Present the popover from the button that was tapped in the detail view.
+    [self.popover presentPopoverFromRect:tappedButton.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 @end

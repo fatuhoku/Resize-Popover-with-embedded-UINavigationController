@@ -21,6 +21,7 @@
 		0B934B1A18C9289700570221 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B934AFC18C9289700570221 /* UIKit.framework */; };
 		0B934B2218C9289700570221 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B934B2018C9289700570221 /* InfoPlist.strings */; };
 		0B934B2418C9289700570221 /* PopoverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B934B2318C9289700570221 /* PopoverDemoTests.m */; };
+		E22BA032146FFEA2C7E54CF2 /* MESPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA6220691678F622E4AF7 /* MESPopoverController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0B934B1F18C9289700570221 /* PopoverDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopoverDemoTests-Info.plist"; sourceTree = "<group>"; };
 		0B934B2118C9289700570221 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B934B2318C9289700570221 /* PopoverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverDemoTests.m; sourceTree = "<group>"; };
+		E22BA6220691678F622E4AF7 /* MESPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESPopoverController.m; sourceTree = "<group>"; };
+		E22BA958F711DA558A4451B8 /* MESPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESPopoverController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				0B934B0E18C9289700570221 /* MESViewController.m */,
 				0B934B1018C9289700570221 /* Images.xcassets */,
 				0B934AFF18C9289700570221 /* Supporting Files */,
+				E22BA6220691678F622E4AF7 /* MESPopoverController.m */,
+				E22BA958F711DA558A4451B8 /* MESPopoverController.h */,
 			);
 			path = PopoverDemo;
 			sourceTree = "<group>";
@@ -197,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MES;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = MakeEatSee;
 				TargetAttributes = {
 					0B934B1518C9289700570221 = {
@@ -253,6 +258,7 @@
 				0B934B0918C9289700570221 /* MESAppDelegate.m in Sources */,
 				0B934B0F18C9289700570221 /* MESViewController.m in Sources */,
 				0B934B0518C9289700570221 /* main.m in Sources */,
+				E22BA032146FFEA2C7E54CF2 /* MESPopoverController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +312,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -346,7 +351,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -405,7 +409,6 @@
 		0B934B2B18C9289700570221 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PopoverDemo.app/PopoverDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -428,7 +431,6 @@
 		0B934B2C18C9289700570221 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PopoverDemo.app/PopoverDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -463,6 +465,7 @@
 				0B934B2918C9289700570221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B934B2A18C9289700570221 /* Build configuration list for PBXNativeTarget "PopoverDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +474,7 @@
 				0B934B2C18C9289700570221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
