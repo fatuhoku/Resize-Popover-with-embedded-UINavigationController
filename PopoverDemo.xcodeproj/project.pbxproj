@@ -22,7 +22,6 @@
 		0B934B2218C9289700570221 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B934B2018C9289700570221 /* InfoPlist.strings */; };
 		0B934B2418C9289700570221 /* PopoverDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B934B2318C9289700570221 /* PopoverDemoTests.m */; };
 		3570048DE213D61EB2A2F4D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B70F59DDAB10AB20D1674 /* libPods.a */; };
-		E22BA032146FFEA2C7E54CF2 /* MESContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BA6220691678F622E4AF7 /* MESContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +57,6 @@
 		0B934B2318C9289700570221 /* PopoverDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverDemoTests.m; sourceTree = "<group>"; };
 		35700A1DF25F376E97263B50 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A029AB627D4121063A39D5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E22BA6220691678F622E4AF7 /* MESContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESContentViewController.m; sourceTree = "<group>"; };
-		E22BA958F711DA558A4451B8 /* MESContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESContentViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +126,6 @@
 				0B934B0E18C9289700570221 /* MESViewController.m */,
 				0B934B1018C9289700570221 /* Images.xcassets */,
 				0B934AFF18C9289700570221 /* Supporting Files */,
-				E22BA6220691678F622E4AF7 /* MESContentViewController.m */,
-				E22BA958F711DA558A4451B8 /* MESContentViewController.h */,
 			);
 			path = PopoverDemo;
 			sourceTree = "<group>";
@@ -309,7 +304,6 @@
 				0B934B0918C9289700570221 /* MESAppDelegate.m in Sources */,
 				0B934B0F18C9289700570221 /* MESViewController.m in Sources */,
 				0B934B0518C9289700570221 /* main.m in Sources */,
-				E22BA032146FFEA2C7E54CF2 /* MESContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
